@@ -5,7 +5,7 @@ public class SomaImpares {
 		int num;
 		int soma = 0;
 		
-		for(num=1; num<10001; num++) {
+		for(num=1; num<=10000; num++) {
 			if (num%2!=0) {
 				soma = soma + num;
 			}
