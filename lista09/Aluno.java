@@ -42,7 +42,7 @@ public class Aluno implements Comparable<Aluno>{
 	}
 
 	@Override
-	public int compareTo(Aluno o) {
-		return nome.compareTo(o.getNome());
+	public int compareTo(Aluno a) {
+		return this.nome.compareTo(a.nome);
 	} 
 }

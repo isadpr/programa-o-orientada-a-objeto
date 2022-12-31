@@ -30,18 +30,23 @@ public class Utils {
 			String aluno = (String)it.next();
 			String[] s = aluno.split("#");
 			
-			if(s[1].equals("R")) {
+			if(s[3].equals("R")) {
 				Aluno a1 = new AlunoRegular(s[0]);
-				alunos.put(s[1], a1);
+				a1.setNome(s[1]);
+				a1.setNota(Double.parseDouble(s[2]));
+				alunos.put(s[0], a1);
 			}
-			else if(s[1].equals("E")) {
+			else if(s[3].equals("E")) {
 				Aluno a2 = new AlunoEspecial(s[0]);
-				alunos.put(s[1], a2);
+				a2.setNome(s[1]);
+				a2.setNota(Double.parseDouble(s[2]));
+				alunos.put(s[0], a2);
 			}
 			else {
-				//RuntimeException
+				throw new RuntimeException();
 			}
 		}
+		
 		return alunos;
 	}
 }

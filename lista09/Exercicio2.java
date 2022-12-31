@@ -10,7 +10,7 @@ public class Exercicio2 {
 		
 		while(it.hasNext()) {
 			String chave = (String)it.next();
-			if(chave.substring(0, 1).equals("A")) {
+			if(chave.startsWith("A")) {
 					Integer value = mapa.get(chave);
 					soma+=value;
 				}
